@@ -23,7 +23,7 @@ class Solution1472 {
     }
 
     public void visit(String url) {
-        System.out.println("Visit start curr: " + curr.url);
+
         BrowserNode bn = new BrowserNode(url);
         if (curr == head) { // Si estamos en el homepage (primer nodo)
             curr = bn;
@@ -58,7 +58,6 @@ class Solution1472 {
             while(curr != head && count < steps) {
                 count++;
                 curr = curr.prev;
-                System.out.print(curr.url);
             }
 
             return curr.url;
